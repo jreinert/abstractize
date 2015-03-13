@@ -1,19 +1,19 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'abstract/version'
+require 'abstractize/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'abstract'
-  spec.version       = Abstract::VERSION
+  spec.name          = 'abstractize'
+  spec.version       = Abstractize::VERSION
   spec.authors       = ['Joakim Reinert']
   spec.email         = ['reinert@meso.net']
 
   spec.metadata['allowed_push_host'] = 'NONE' if spec.respond_to?(:metadata)
 
   spec.summary       = 'Simple mixin to provide abstract class functionality'
-  spec.homepage      = 'https://git.meso.net/ws/abstract'
-  spec.license       = 'other'
+  spec.homepage      = 'https://github.com/jreinert/abstractize'
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(/^(test|spec|features)\//)

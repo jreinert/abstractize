@@ -1,15 +1,13 @@
-# Abstract
+# Abstractize
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/abstract`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple mixin for abstract class functionality in ruby
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'abstract'
+gem 'abstractize'
 ```
 
 And then execute:
@@ -22,7 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+``` ruby
+require 'abstractize'
+
+class Vehicle
+  include Abstractize
+end
+```
+
 
 ## Development
 

@@ -1,18 +1,18 @@
 require 'spec_helper'
 
-describe Abstract do
+describe Abstractize do
   it 'has a version number' do
-    expect(Abstract::VERSION).not_to be nil
+    expect(Abstractize::VERSION).not_to be nil
   end
 
   describe '.new' do
     let(:abstract_class) do
-      Class.new { include Abstract }
+      Class.new { include Abstractize }
     end
 
     let(:abstract_class_with_initializer) do
       Class.new do
-        include Abstract
+        include Abstractize
 
         attr_reader :foo
 
@@ -47,7 +47,7 @@ describe Abstract do
   describe '.abstract_method' do
     let(:abstract_class) do
       Class.new do
-        include Abstract
+        include Abstractize
 
         define_abstract_method :foobar
       end

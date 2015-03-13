@@ -1,3 +1,3 @@
-module Abstract
+module Abstractize
   VERSION = "0.1.0"
 end

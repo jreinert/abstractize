@@ -1,12 +1,12 @@
-require 'abstract/version'
-require 'abstract/abstract_error'
+require 'abstractize/version'
+require 'abstractize/abstract_error'
 
 # Mixin for abstract classes
-module Abstract
+module Abstractize
   def self.included(base)
     (class << base; self; end).instance_eval do
-      define_method(:new, Abstract.abstract_new(base))
-      define_method(:define_abstract_method, Abstract.abstract_method)
+      define_method(:new, Abstractize.abstract_new(base))
+      define_method(:define_abstract_method, Abstractize.abstract_method)
     end
   end
 
