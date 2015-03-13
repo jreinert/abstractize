@@ -1,0 +1,2 @@
+class AbstractError < RuntimeError
+end
