@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = 'abstractize'
   spec.version       = Abstractize::VERSION
   spec.authors       = ['Joakim Reinert']
-  spec.email         = ['reinert@meso.net']
+  spec.email         = ['mail@jreinert.com']
 
-  spec.metadata['allowed_push_host'] = 'NONE' if spec.respond_to?(:metadata)
+  spec.metadata['allowed_push_host'] = 'https://rubygems.org' if spec.respond_to?(:metadata)
 
   spec.summary       = 'Simple mixin to provide abstract class functionality'
   spec.homepage      = 'https://github.com/jreinert/abstractize'
