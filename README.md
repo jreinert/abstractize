@@ -25,9 +25,48 @@ require 'abstractize'
 
 class Vehicle
   include Abstractize
+
+  attr_reader :wheels, :mileage
+  def initialize(wheels=4)
+    @mileage = 0
+    @wheels = wheels
+  end
+
+  define_abstract_method :drive
 end
 ```
 
+``` ruby
+class Car < Vehicle
+end
+```
+
+``` ruby
+class Tricycle < Vehicle
+  def initialize
+    super(3)
+  end
+
+  def drive
+    @mileage += 0.01
+  end
+end
+```
+
+``` ruby
+vehicle = Vehicle.new(2)
+# AbstractError: cannot instanciate Vehicle
+car = Car.new
+# => #<Car:0x007f5e130631f0 @mileage=0, @wheels=4>
+car.drive
+# AbstractError: not implemented
+tricycle = Tricycle.new
+# => #<Tricycle:0x007f5e13093148 @mileage=0, @wheels=3>
+tricycle.drive
+# => 0.01
+tricycle.drive
+# => 0.02
+```
 
 ## Development
 
