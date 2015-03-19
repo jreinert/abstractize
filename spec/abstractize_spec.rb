@@ -61,5 +61,11 @@ describe Abstractize do
       instance = Class.new(abstract_class).new
       expect { instance.foobar }.to raise_error(AbstractError)
     end
+
+    it 'raises AbstractError with any amount of params' do
+      instance = Class.new(abstract_class).new
+      expect { instance.foobar(:foo) }.to raise_error(AbstractError)
+      expect { instance.foobar(:foo, :bar) }.to raise_error(AbstractError)
+    end
   end
 end

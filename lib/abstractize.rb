@@ -22,7 +22,7 @@ module Abstractize
 
   def abstract_method
     lambda do |name|
-      define_method(name) do
+      define_method(name) do |*_args|
         fail AbstractError, 'not implemented'
       end
     end
