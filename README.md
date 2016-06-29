@@ -1,5 +1,7 @@
 # Abstractize
 
+[![Build Status](https://travis-ci.org/jreinert/abstractize.svg?branch=development)](https://travis-ci.org/jreinert/abstractize)
+
 A simple mixin for abstract class functionality in ruby
 
 ## Installation
