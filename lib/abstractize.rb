@@ -14,9 +14,8 @@ module Abstractize
 
   def abstract_new(base)
     lambda do |*args|
-      instance = super(*args)
       fail AbstractError, "cannot instanciate #{name}" if self == base
-      instance
+      super(*args)
     end
   end
 
